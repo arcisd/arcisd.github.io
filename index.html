@@ -1,10 +1,247 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diego Arcis</title>
+    <style>
+        /* colors */
+        :root {
+            --bg-color: #191919; /* background */
+            --text-white: #ffffff;
+            --text-primary: rgba(255, 255, 255, 0.9);
+            --text-secondary: rgba(255, 255, 255, 0.65);
+            --text-muted: rgba(255, 255, 255, 0.45);
+            --text-decoration: rgba(255, 255, 255, 0.2);
+            --font-stack: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-stack);
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.5;
+            /*font-size: 15px;*/
+        }
+
+        /* banner */
+        .cover-container {
+            width: 100%;
+            height: 30vh;
+            min-height: 220px;
+            max-height: 280px;
+            background-image: url('https://images.unsplash.com/photo-1603528283899-d15c8832de80');
+            background-size: cover;
+            background-position: center 50%;
+        }
+
+        .page-wrapper {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 40px;
+            position: relative;
+        }
+
+        .avatar-container {
+            position: absolute;
+            top: -62px;
+            left: 50px;
+        }
+
+        .avatar {
+            width: 124px;
+            height: 124px;
+            border-radius: 4px;
+            background-image: url('images/avatar.jpg');
+            background-size: cover;
+            background-position: center;
+            /*box-shadow: 0 0 0 4px var(--bg-color);*/
+        }
+
+        .main-content {
+            padding-top: 80px;
+            padding-bottom: 100px;
+        }
+
+        h1.title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0 0 18px 0;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+        }
+
+        .affiliation {
+            font-size: 16.5px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+
+        .affiliation a {
+            color: var(--text-secondary);
+            text-decoration-color: rgba(255, 255, 255, 0.35);
+        }
+
+        .address {
+            font-size: 14px;
+            color: var(--text-primary);
+            margin-top: 2px;
+            margin-bottom: 24px;
+        }
+
+        .quick-links {
+            font-size: 14px;
+            color: var(--text-primary);
+            margin-bottom: 36px;
+        }
+
+        .quick-links a {
+            color: var(--text-secondary);
+            text-decoration-color: var(--text-decoration);
+        }
+
+        .quick-links a:hover {
+            color: var(--text-primary);
+        }
+
+        h2.section-heading {
+            font-size: 17.5px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 32px;
+            margin-bottom: 16px;
+        }
+
+        .publications-list {
+            margin: 0 0 32px 0;
+            padding-left: 22px;
+            font-size: 14px;
+            color: var(--text-primary);
+        }
+
+        .publications-list li {
+            padding-left: 6px;
+            margin-bottom: 6px;
+            line-height: 1.45;
+        }
+
+        /*.pub-title {}*/
+
+        .pub-journal {
+            font-style: italic;
+        }
+
+        .footer-text {
+            font-size: 14px;
+            color: var(--text-primary);
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        .footer-text a, .publications-list a {
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-decoration-color: var(--text-decoration);
+        }
+
+        .footer-text a:hover, .publications-list a:hover {
+            color: var(--text-primary);
+        }
+
+        /* mobile */
+        @media (max-width: 768px) {
+            .page-wrapper {
+                padding: 0 20px;
+            }
+            .avatar-container {
+                left: 20px;
+                top: -45px;
+            }
+            .avatar {
+                width: 90px;
+                height: 90px;
+            }
+            .main-content {
+                padding-top: 60px;
+            }
+            h1.title {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Diego Arcis</h1>
+
+    <div class="cover-container"></div>
+
+    <div class="page-wrapper">
+        
+        <div class="avatar-container">
+            <div class="avatar"></div>
+        </div>
+
+        <main class="main-content">
+            
+            <h1 class="title">Diego Arcis</h1>
+
+            <div class="affiliation">
+                <a href="#">Departamento de Matemáticas</a>, <a href="#">Facultad de Ciencias</a>, <a href="#">Universidad de La Serena</a> - Chile
+            </div>
+
+            <div class="address">
+                Cisternas 1200 — 1700000 La Serena, Chile (Of. 202).
+            </div>
+
+            <div class="quick-links">
+                <a href="https://arxiv.org/search/?searchtype=author&query=Arcis%2C+D" target="_blank" rel="noopener noreferrer">arXiv</a> | 
+                <a href="https://www.webofscience.com/wos/author/record/AAG-5849-2020" target="_blank" rel="noopener noreferrer">WOS</a> | 
+                <a href="https://www.researchgate.net/profile/Diego-Arcis" target="_blank" rel="noopener noreferrer">ResearchGate</a> | 
+                <a href="https://investigadores.anid.cl/es/public_search/researcher?id=29812" target="_blank" rel="noopener noreferrer">ANID</a> | 
+                <a href="https://www.linkedin.com/in/arcisd/" target="_blank" rel="noopener noreferrer">LinkedIn</a> | 
+                <a href="https://orcid.org/0000-0003-0027-9323" target="_blank" rel="noopener noreferrer">ORCID</a> | 
+                <a href="https://www.grupoatn.org/"target="_blank" rel="noopener noreferrer">Grupo ATN</a> | 
+                <a href="https://www.grupoatn.org/encuentro/viii/" target="_blank" rel="noopener noreferrer">Encuentro ATN</a> | 
+                <a href="https://manchester-semigroups.github.io/ems-semigroups/index.html" target="_blank" rel="noopener noreferrer">EMS-Semigroups</a>
+            </div>
+
+            <h2 class="section-heading">Publications:</h2>
+
+            <ul class="publications-list" style="list-style-type: disc;">
+                <li>D. Arcis, J. Espinoza and M. Flores. <a href="#"><span class="pub-title">On the Rook Yokonuma-Hecke algebra</span></a>. In preparation, 2026+.</li>
+                <li>D. Arcis, C. González and S. Márquez. <a href="#"><span class="pub-title">Twisted algebras of invariant formal power series over monoids</span></a>. In preparation, 2026+.</li>
+                <li>D. Arcis. <a href="https://arxiv.org/abs/2607.03727" target="_blank" rel="noopener noreferrer"><span class="pub-title">A note on the submonoids of the tied-symmetric monoid containing the symmetric group</span></a>. Submitted, 2026+.</li>
+                <li>D. Arcis, C. González and S. Márquez. <a href="https://arxiv.org/abs/2604.06431" target="_blank" rel="noopener noreferrer"><span class="pub-title">On quasi symmetric functions in superspace</span></a>. Submitted, 2026+.</li>
+                <li>D. Arcis and J. Juyumaya. <a href="https://arxiv.org/abs/2603.19917" target="_blank" rel="noopener noreferrer"><span class="pub-title">Party-Hecke algebras</span></a>. Submitted, 2026+.</li>
+                <li>D. Arcis, J. Espinoza and M. Flores. <a href="https://arxiv.org/abs/2512.11188" target="_blank" rel="noopener noreferrer"><span class="pub-title">On framed rook algebras</span></a>. Submitted, 2025+.</li>
+                <li>D. Arcis and J. Espinoza. <a href="https://doi.org/10.1016/j.jalgebra.2025.07.039" target="_blank" rel="noopener noreferrer"><span class="pub-title">Tied-boxed algebras</span></a>. <span class="pub-journal">J Algebra</span>, 685: 112-159, 1 2026.</li>
+                <li>D. Arcis, C. González and S. Márquez. <a href="https://doi.org/10.1016/j.disc.2024.114320" target="_blank" rel="noopener noreferrer"><span class="pub-title">Symmetric functions in noncommuting variables in superspace</span></a>. <span class="pub-journal">Discrete Math</span>, 348(2): 114320, 2 2025.</li>
+                <li>D. Arcis, C. González and S. Márquez. <a href="https://doi.org/10.37236/12295" target="_blank" rel="noopener noreferrer"><span class="pub-title">On the Hopf algebra of noncommutative symmetric functions in superspace</span></a>. <span class="pub-journal">Electron J Comb</span>, 31(3): P3.28, 9 2024.</li>
+                <li>F. Aicardi, D. Arcis and J. Juyumaya. <a href="https://www.doi.org/10.17323/1609-4514-2024-24-3-321-355" target="_blank" rel="noopener noreferrer"><span class="pub-title">Ramified inverse and planar monoids</span></a>. <span class="pub-journal">Mosc Math J</span>, 24(3): 321-355, 9 2024.</li>
+                <li>F. Aicardi, D. Arcis and J. Juyumaya. <a href="https://doi.org/10.1016/j.jpaa.2022.107161" target="_blank" rel="noopener noreferrer"><span class="pub-title">Brauer and Jones tied monoids</span></a>. <span class="pub-journal">J Pure Appl Algebra</span>, 227(1): 107161, 1 2023.</li>
+                <li>D. Arcis and S. Márquez. <a href="https://doi.org/10.1142/S0219498822502243" target="_blank" rel="noopener noreferrer"><span class="pub-title">Hopf algebras on planar trees and permutations</span></a>. <span class="pub-journal">J Algebra Appl</span>, 21(11): 2250224 , 11 2022.</li>
+                <li>D. Arcis and J. Juyumaya. <a href="https://doi.org/10.1007/s00233-021-10212-y" target="_blank" rel="noopener noreferrer"><span class="pub-title">Tied monoids</span></a>. <span class="pub-journal">Semigroup Forum</span>, 103: 356-394, 10 2021.</li>
+                <li>D. Arcis and L. Paris. <a href="https://doi.org/10.1142/S0218196719500322" target="_blank" rel="noopener noreferrer"><span class="pub-title">Ordering Garside groups</span></a>. <span class="pub-journal">Int J Algebra Comput</span>, 29(5): 861-883, 3 2019.</li>
+            </ul>
+
+            <div class="footer-text">
+                I made my <a href="https://theses.fr/2017UBFCK049" target="_blank" rel="noopener noreferrer">doctoral thesis</a> at the <a href="https://www.u-bourgogne.fr/" target="_blank" rel="noopener noreferrer">Université de Bourgogne</a> (<a href="https://math.u-bourgogne.fr/" target="_blank" rel="noopener noreferrer">IMB</a>) under the supervision of <a href="https://lparis.perso.math.cnrs.fr/" target="_blank" rel="noopener noreferrer">Luis Paris</a>.
+            </div>
+
+            <div class="footer-text">
+                [ I also collect <a href="https://arcisd.notion.site/p/0eff9a792a514f76aa4553159ba2dcc2?v=7610869d8ac44e84803e0efddf5f0fdf&pvs=25" target="_blank" rel="noopener noreferrer">some music</a> ]
+            </div>
+
+        </main>
+    </div>
+
 </body>
 </html>
